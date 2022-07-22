@@ -1,28 +1,24 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ReactDOM from "react-dom/client";
+// import ReactGA from "react-ga4"
+// react library for routing
+import { Route, Switch, Redirect, useLocation } from "react-router-dom";
+export default function App() {
+  const [placeholder, setPlaceholder] = React.useState("");
 
-
-export default function App() = () => {
-  const [placeholder, setPlaceholder] = React.useState('');
-
-  const
-    string = 'My output is better this way!',
+  const string = "My output is better this way!",
     index = React.useRef(0);
 
   React.useEffect(() => {
     function update() {
-      setPlaceholder(prev => prev + string[index.current]);
+      setPlaceholder((prev) => prev + string[index.current]);
       index.current++;
     }
     if (index.current < string.length) {
-      let addChar = setInterval(update, 20);
+      let addChar = setInterval(update, 100);
       return () => clearInterval(addChar);
     }
   }, [placeholder]);
 
-  return (
-    <div>
-      {placeholder}
-    </div>
-  )
+  return <div>{placeholder}</div>;
 }
