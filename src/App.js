@@ -18,7 +18,6 @@ export default function App() {
     if (index.current < string.length - 1) {
       let addChar = setInterval(update, 50);
       return () => clearInterval(addChar);
-      ß;
     }
   }, [placeholder]);
 
