@@ -16,7 +16,7 @@ export default function App() {
       setPlaceholder((prev) => prev + string[index.current]);
     }
     if (index.current < string.length - 1) {
-      let addChar = setInterval(update, 25);
+      let addChar = setInterval(update, 22);
       return () => clearInterval(addChar);
     }
   }, [placeholder]);
