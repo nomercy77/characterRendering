@@ -21,5 +21,5 @@ export default function App() {
     }
   }, [placeholder]);
 
-  return <div>{placeholder}</div>;
+  return <div> {placeholder} </div>;
 }
