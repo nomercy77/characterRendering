@@ -6,7 +6,8 @@ import { Route, Switch, Redirect, useLocation } from "react-router-dom";
 export default function App() {
   const [placeholder, setPlaceholder] = React.useState("");
 
-  const string = "My output is better this way!",
+  const string =
+      "M e output is better this way. This is a better UX for caption generation!!",
     index = React.useRef(0);
 
   React.useEffect(() => {
@@ -14,9 +15,10 @@ export default function App() {
       setPlaceholder((prev) => prev + string[index.current]);
       index.current++;
     }
-    if (index.current < string.length) {
-      let addChar = setInterval(update, 80);
+    if (index.current < string.length - 1) {
+      let addChar = setInterval(update, 50);
       return () => clearInterval(addChar);
+      ß;
     }
   }, [placeholder]);
 
