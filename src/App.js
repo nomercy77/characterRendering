@@ -10,12 +10,12 @@ export default function App() = () => {
     index = React.useRef(0);
 
   React.useEffect(() => {
-    function tick() {
+    function update() {
       setPlaceholder(prev => prev + string[index.current]);
       index.current++;
     }
     if (index.current < string.length) {
-      let addChar = setInterval(tick, 500);
+      let addChar = setInterval(update, 500);
       return () => clearInterval(addChar);
     }
   }, [placeholder]);
