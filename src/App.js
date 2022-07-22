@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import ReactDOM from "react-dom/client";
 // import ReactGA from "react-ga4"
 // react library for routing
-import { Route, Switch, Redirect, useLocation } from "react-router-dom";
+import { Route } from "react-router-dom";
 export default function App() {
   const [placeholder, setPlaceholder] = React.useState("");
 
