@@ -7,7 +7,7 @@ export default function App() {
   const [placeholder, setPlaceholder] = React.useState("");
 
   const string =
-      "M e output is better this way. This is a better UX for caption generation!!",
+      "M y output is better this way. This is a better UX for caption generation!!",
     index = React.useRef(0);
 
   React.useEffect(() => {
